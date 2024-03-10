@@ -14,16 +14,13 @@ import lombok.NoArgsConstructor;
 @Entity(name = "cliente")
 public class Cliente {
 
-    @JsonProperty("id")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    @JsonProperty("nome")
     @Column(name = "nome", nullable = false)
     private String nome;
 
-    @JsonProperty("cpf")
     @Column(name = "cpf", nullable = false)
     private String cpf;
 }
